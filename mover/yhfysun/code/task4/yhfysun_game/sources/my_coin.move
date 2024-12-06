@@ -1,5 +1,5 @@
 /// Module: my_coin
-module my_coin::yhfy_coin;
+module yhfysun_game::yhfy_coin;
 use std::option::{some};
 use sui::coin::create_currency;
 use sui::transfer::{public_freeze_object, public_transfer, public_share_object};
@@ -41,8 +41,8 @@ fun init(yhfy_coin: YHFY_COIN, ctx: &mut TxContext) {
     */
 
     // 独有
-    // public_transfer(treasury, ctx.sender());
+    public_transfer(treasury, ctx.sender());
     // 水龙头
-    public_share_object(treasury);
+    // public_share_object(treasury);
 
 }
